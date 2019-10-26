@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hellotoast.HelloToastPractice">
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="389dp"
+        android:layout_height="395dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="@string/text_number"
+        android:textColor="#000000"
+        android:textSize="300sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:text="@string/button_name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_countup"
+        app:layout_constraintEnd_toStartOf="@+id/button_countup"
+        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintStart_toStartOf="@+id/text_count"
+        android:onClick="ShowToast"/>
+
+    <Button
+        android:id="@+id/button_countup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:background="#FF5722"
+        android:text="@string/button_increment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_count"
+        android:onClick="countUp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
